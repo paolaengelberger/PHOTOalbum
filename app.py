@@ -12,6 +12,8 @@ df = pd.DataFrame(
         {"command": "Dato 2", "Frecuencia":0 , },
         {"command": "Dato 3", "Frecuencia":0, },
     ]
-) edited_df = st.data_editor(df, num_rows="dynamic")
+) 
+edited_df= st.data_editor(df, num_rows="dynamic") 
+favorite_command = edited_df.loc[edited_df["Frecuencia"].idxmax()]["command"]
 
 

@@ -15,5 +15,5 @@ df = pd.DataFrame(
 )
 
 custom_num_rows = st.number_input("Enter the number of rows", min_value=1, value=0, type=int)
-edited_df = st.dataframe(df.head(custom_num_rows))
-favorite_command = edited_df.loc[edited_df["Frecuencia"].idxmax()]["Dato"]
+edited_df = df.head(custom_num_rows)
+st.table(edited_df)

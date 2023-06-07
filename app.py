@@ -1,9 +1,10 @@
-import streamlit as st 
+import streamlit as st
 import pandas as pd
+import numpy as np
 
 st.title("Welcome to my first app")
 
-st.markdown(" :violet[This app will generate graphs from frecuency tables ;)]")  
+st.markdown(":violet[This app will generate graphs from frequency tables ;)]")
 
 df = pd.DataFrame(
     [

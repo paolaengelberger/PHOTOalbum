@@ -21,4 +21,3 @@ for _ in range(custom_num_rows):
 editable_df = st.dataframe(df, editable=True)
 
 favorite_command = editable_df.loc[editable_df["Frecuencia"].idxmax(), "Dato"]
-

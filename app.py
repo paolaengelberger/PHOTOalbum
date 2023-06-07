@@ -13,6 +13,8 @@ df = pd.DataFrame(
         {"command": "Dato 3", "Frecuencia":0, },
     ]
 ) 
+
+custom_num_rows = st.number_input("Enter the number of rows", min_value=1, value=len(df))
 edited_df= st.data_editor(df, num_rows="dynamic") 
 favorite_command = edited_df.loc[edited_df["Frecuencia"].idxmax()]["command"]
 

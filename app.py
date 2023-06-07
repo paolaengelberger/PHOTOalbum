@@ -1,6 +1,6 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
+
 
 st.title("Welcome to my first app")
 
@@ -15,5 +15,14 @@ df = pd.DataFrame(
 )
 
 custom_num_rows = st.number_input("Enter the number of rows", min_value=1, value=0, type=int)
-edited_df = df.head(custom_num_rows)
+edited_df = pd.DataFrame(columns=["Dato", "Frecuencia"])
+
+for _ in range(custom_num_rows):
+    dato = st.text_input("Enter Dato")
+    frecuencia = st.number_input("Enter Frecuencia", min_value=0, value=0, step=1)
+    row = {"Dato": dato, "Frecuencia": frecuencia}
+    edited_df = edited_df.append(row, ignore_index=True)
+
 st.table(edited_df)
+
+favorite_command = edited_df.loc[edited_df["Frecuencia"].idxmax(), "Dato"]

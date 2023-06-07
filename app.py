@@ -8,9 +8,9 @@ st.markdown(" :violet[This app will generate graphs from frecuency tables ;)]")
 
 df = pd.DataFrame(
     [
-        {"Dato": "Dato 1", "Frecuencia":0, },
-        {"Dato": "Frecuencia":0, },
-        {"Dato": "Frecuencia":0, },
+        {"Dato": "Dato 1", "Frecuencia": 0, },
+        {"Dato": "Dato 2", "Frecuencia": 0, },
+        {"Dato": "Dato 2", "Frecuencia": 0, },
     ]
 ) 
 
